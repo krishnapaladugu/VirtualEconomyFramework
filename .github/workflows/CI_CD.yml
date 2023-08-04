@@ -1,0 +1,27 @@
+name: .NET build
+
+on:
+  push:
+    branches: [ Test_CI_CD_MockDev ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.x'
+        
+    - name: Install dependencies
+      run: dotnet restore  ./VirtualEconomyFramework/VENFTApp-Server
+   
+    - name: Build
+      run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server --configuration Release --no-restore
+      
+    - name: Executing Unit Test
+      run: dotnet test ./VirtualEconomyFramework/VENFTApp-Server
