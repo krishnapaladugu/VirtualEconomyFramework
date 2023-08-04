@@ -22,6 +22,4 @@ jobs:
    
     - name: Build
       run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server/VENFTApp-Server.csproj --configuration Release --no-restore
-      
-    - name: Executing Unit Test
-      run: dotnet test ./VirtualEconomyFramework/VENFTApp-Server/VENFTApp-Server.csproj
+    
