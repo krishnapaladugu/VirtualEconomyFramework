@@ -2,7 +2,7 @@ name: .NET build
 
 on:
   push:
-    branches: [ Test_CI_CD_MockDev ]
+    branches: [ GitHubAction_DemoProject ]
 
 jobs:
   build:
