@@ -22,4 +22,12 @@ jobs:
    
     - name: Build
       run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server/VENFTApp-Server.csproj --configuration Release --no-restore
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
+      with:
+          app-name: 'SampleHelloworldtest'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BFA9464D69944D898AF09ACD88C1EB0E }}
+          package: .
     
