@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - SampleHelloworldtest
 on:
   push:
     branches:
-      - GitHubAction_DemoProject
+      - GitHubAction_DemoProject1
   workflow_dispatch:
 
 jobs:
