@@ -26,8 +26,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-          app-name: 'SampleHelloworldtest'
+          app-name: 'welcomepagedemo'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BFA9464D69944D898AF09ACD88C1EB0E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2F636DDAF9184D86A9988F803317E3CD }}
           package: .
-    
