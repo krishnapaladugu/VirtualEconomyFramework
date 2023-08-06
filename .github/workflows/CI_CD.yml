@@ -29,4 +29,4 @@ jobs:
           app-name: 'welcomepagedemo'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2F636DDAF9184D86A9988F803317E3CD }}
-          package: ./VirtualEconomyFramework/VirtualEconomyFramewor/VENFTApp-Server/pages/
+          package: ./VirtualEconomyFramework/VirtualEconomyFramework/VENFTApp-Server/pages/
