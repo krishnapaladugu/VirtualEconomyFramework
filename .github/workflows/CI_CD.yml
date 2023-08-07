@@ -24,6 +24,12 @@ jobs:
    
     - name: Build
       run: dotnet build ./VirtualEconomyFramework/VENFTApp-Server/VENFTApp-Server.csproj --configuration Release --no-restore
+      
+    - name: Execute
+      run: |
+         pwd
+         
+      
     - name: Deploy to Azure Web App
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
