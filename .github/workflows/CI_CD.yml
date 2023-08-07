@@ -8,7 +8,9 @@ jobs:
   build:
 
     runs-on: windows-latest
-
+    permissions:
+      contents: read
+      packages: write
     steps:
     - uses: actions/checkout@v2
       
@@ -29,7 +31,4 @@ jobs:
           app-name: 'welcomepagedemo'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2F636DDAF9184D86A9988F803317E3CD }}
-          run: |
-                $pwd
-                sudo chmod -R 777
-          package: '.'
+          package: ./VirtualEconomyFramework/VENFTApp-Server/
